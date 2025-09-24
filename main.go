@@ -35,6 +35,7 @@ func (c *car) ChangeColor(newColor string) {
 func (c *car) AddObject(obj Object) {
 	for i, existing := range c.trunk {
 		if existing.name == obj.name {
+			//sur 10 lignes de commentaires qui servaient a me reperer j'avais oublier d'enlever cette ligne //
 			c.trunk[i].quantité += obj.quantité
 			fmt.Printf("Ajout de %d %s dans le coffre (nouvelle quantité : %d)\n",
 				obj.quantité, obj.name, c.trunk[i].quantité)
@@ -53,5 +54,6 @@ func (c Car) ShowInfo() {
 	fmt.Printf("129 : %d CH\n", c.power)
 	fmt.Printf("Rouge : %s\n", c.color)
 }
+
 
 
